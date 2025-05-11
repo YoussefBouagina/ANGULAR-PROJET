@@ -4,17 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AddLivreComponent } from './add-livre/add-livre.component';
+import { RechercheParGenreComponent } from './recherche-par-genre/recherche-par-genre.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AddLivreComponent
+    AddLivreComponent,
+    RechercheParGenreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: []
 })
