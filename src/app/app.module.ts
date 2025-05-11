@@ -4,16 +4,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddLivreComponent } from './add-livre/add-livre.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AppComponent,
+    AddLivreComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
-    AppComponent
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
