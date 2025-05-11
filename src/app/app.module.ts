@@ -16,7 +16,6 @@ import { AddLivreComponent } from './add-livre/add-livre.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: []
+  providers: []
 })
 export class AppModule { }
