@@ -3,12 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { AddLivreComponent } from './add-livre/add-livre.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
     AddLivreComponent
   ],
   imports: [
@@ -19,6 +17,6 @@ import { AddLivreComponent } from './add-livre/add-livre.component';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }
