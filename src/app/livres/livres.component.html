@@ -1,0 +1,29 @@
+<div ngSkipHydration>
+
+     <div class="container">
+            <div class="card shadow mb-4">
+            <div class="card-body">
+            <table class="table table-striped">
+            <tr> <th>id</th><th>titre</th><th>auteur</th> <th>nbpages</th> <th>datepublication</th> <th>genre</th> </tr>
+            <tbody >
+                <tr *ngFor="let livre of livres">
+                    <td>{{livre.idlivre}}</td>
+                    <td>{{livre.titre}}</td>
+                    <td>{{livre.auteur}}</td>
+                    <td>{{livre.nbpages}}</td>
+                   <!--  <td>{{livre.email}}</td> -->
+                    <td>{{livre.datepublication | date :'dd/MM/yyyy'}}</td>
+                     <td>{{livre.genre?.nomgenre}}</td> 
+                    <td><a *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerlivre(livre)">Supprimer</a></td>
+                    <td><a *ngIf="authService.isAdmin()" class="btn btn-success" [routerLink]="['/updatelivre',livre.idlivre]">Modifier</a></td>
+                  </tr>
+                  
+            </tbody>
+            </table>
+            </div>
+            </div>
+            </div>
+      </div>
+    
+
+   

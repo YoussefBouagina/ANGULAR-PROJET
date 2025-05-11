@@ -1,0 +1,50 @@
+<div ngSkipHydration>
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+        <label>titre du livre en tapant</label>
+        <input #nom [(ngModel)]="searchTerm" name="searchTerm" class="form-control" >
+        </div>
+        </form>
+        
+    <!--     <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+        <label>titre du livre en tapant</label>
+        <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+        </div>
+        </form> -->
+
+
+    <!-- <div class="container">
+        <div class="col-sm-4 col-md-4 col-lg-4 mb-4"> 
+            <label>genres </label> 
+            <select class="form-control form-control-lg" id="idgenre" name="idgenre" [(ngModel)]="Idgenre" (change)="onChange()"> 
+            <option *ngFor="let gen of genres" value="{{gen.idgenre}}"> {{gen.nomgenre}} 
+            </option> 
+            </select> 
+            </div>  -->
+
+           <div class="card shadow mb-4">
+           <div class="card-body">
+           <table class="table table-striped">
+           <tr> <th>id</th><th>titre</th><th>auteur</th> <th>nbpages</th> <th>datepublication</th> <th>genre</th> </tr>
+         <tbody *ngFor="let livre of livres | searchFilter: searchTerm ">
+<!-- 
+             <tr *ngFor="let livre of livres"> -->
+                <tr>
+                   <td>{{livre.idlivre}}</td>
+                   <td>{{livre.titre}}</td>
+                   <td>{{livre.auteur}}</td>
+                   <td>{{livre.nbpages}}</td>
+                   <td>{{livre.datepublication | date :'dd/MM/yyyy'}}</td>
+                   <td>{{livre.genre.nomgenre}}</td>
+                 </tr>
+                 
+           </tbody>
+           </table>
+           </div>
+           </div>
+           </div>
+
+   
+
+  
