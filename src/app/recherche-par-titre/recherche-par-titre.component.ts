@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Livre } from '../model/livre.model';
 import { LivreService } from '../livre.service';
+import { SearchFilterPipe } from '../search-filter.pipe';
 
 @Component({
   selector: 'app-recherche-par-titre',
   templateUrl: './recherche-par-titre.component.html',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SearchFilterPipe],
   styles: ``
 })
 export class RechercheParTitreComponent implements OnInit {
@@ -23,6 +24,7 @@ export class RechercheParTitreComponent implements OnInit {
     this.livreService.listelivres().subscribe(livs => {
       console.log(livs);
       this.livres = livs;
+      this.alllivres = livs;
     });
   }
   
