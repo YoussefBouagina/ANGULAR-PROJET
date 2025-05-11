@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Livre } from '../model/livre.model';
 import { LivreService } from '../livre.service';
 import { AuthService } from '../auth.service';
@@ -9,7 +10,7 @@ import { AuthService } from '../auth.service';
   selector: 'app-livres',
   templateUrl: './livres.component.html',
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule, FormsModule]
 })
 export class LivresComponent implements OnInit {
   livres?: Livre[];
